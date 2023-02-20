@@ -1,8 +1,47 @@
 <script> 
 const words = ["rock", "paper", "scissors"];
 let getComputerChoice = words[Math.floor(Math.random() * words.length)]
-    
-console.log(getComputerChoice)
+
+
+let playerSelection = prompt ('choose rock, paper or scissors');
+function playRound(playerSelection, computerSelection) {
+  if ("rock","rock"){
+     return "It's a tie!"
+  }
+  else if ("rock","paper"){
+     return "you lose! Paper beats rock. "
+  }
+  else if ("rock","scissors"){
+     return "you win!"
+  }
+  else if ("paper","paper"){
+     return "It's a tie!"
+  }
+  else if ("paper","rock"){
+     return "you win!"
+  }
+  else if ("paper","scissors"){
+     return "you lose! scissors beat paper"
+  }
+  else if ("scissors","scissors"){
+     return "It's a tie!"
+  }
+  else if ("scissors","paper"){
+     return "you win!"
+  }
+  else if ("scissors","rock"){
+     return "you lose! rock beats scissors"
+  }
+  else {
+     return "this is not an adequate response. Choose rock, paper or scissors. ";
+  }
+}
+ 
+
+const computerSelection =getComputerChoice;
+console.log(playRound(playerSelection, computerSelection));
+
+
 
 
 </script> 
