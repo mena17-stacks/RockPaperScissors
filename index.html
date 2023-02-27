@@ -1,47 +1,66 @@
 <script> 
-const words = ["rock", "paper", "scissors"];
-let getComputerChoice = words[Math.floor(Math.random() * words.length)]
+function game(){
+   let playerScore = 0;
+   let computerScore = 0;
+}
 
+function getComputerChoice(){
+const words = ["rock", "paper", "scissors"];
+for (let i = 0; i < 5; i++) {
+   let choice = Math.floor(Math.random() * 3) + 1;
+   let getComputerChoice = words[Math.floor(Math.random() * words.length)]
+      console.log (getComputerChoice)
+   }
+}
 
 let playerSelection = prompt ('choose rock, paper or scissors');
 function playRound(playerSelection, computerSelection) {
-  if ("rock","rock"){
+   
+  if (playerSelection===computerSelection){
      return "It's a tie!"
+
   }
-  else if ("rock","paper"){
+  else if (playerSelection==="rock"&& computerSelection==="paper"){
      return "you lose! Paper beats rock. "
+
   }
-  else if ("rock","scissors"){
+  else if (playerSelection=== "rock" && computerSelection=== "scissors"){
      return "you win!"
+
   }
-  else if ("paper","paper"){
+  else if (playerSelection==="paper" && computerSelection=== "paper"){
      return "It's a tie!"
+
   }
-  else if ("paper","rock"){
+  else if (playerSelection==="paper" && computerSelection=== "rock"){
      return "you win!"
+
   }
-  else if ("paper","scissors"){
+  else if (playerSelection==="paper" && computerSelection=== "scissors"){
      return "you lose! scissors beat paper"
+
   }
-  else if ("scissors","scissors"){
+  else if (playerSelection==="scissors" && computerSelection=== "scissors"){
      return "It's a tie!"
+ 
   }
-  else if ("scissors","paper"){
+  else if (playerSelection==="scissors" && computerSelection=== "paper"){
      return "you win!"
+
   }
-  else if ("scissors","rock"){
+  else if (playerSelection==="scissors" && computerSelection=== "rock"){
      return "you lose! rock beats scissors"
+
   }
   else {
      return "this is not an adequate response. Choose rock, paper or scissors. ";
   }
+  
 }
- 
 
+ 
 const computerSelection =getComputerChoice;
 console.log(playRound(playerSelection, computerSelection));
-
-
 
 
 </script> 
