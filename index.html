@@ -4,14 +4,15 @@ function game(){
    let computerScore = 0;
 }
 
-function getComputerChoice(){
+
 const words = ["rock", "paper", "scissors"];
 for (let i = 0; i < 5; i++) {
    let choice = Math.floor(Math.random() * 3) + 1;
+}
    let getComputerChoice = words[Math.floor(Math.random() * words.length)]
       console.log (getComputerChoice)
-   }
-}
+   
+
 
 let playerSelection = prompt ('choose rock, paper or scissors');
 function playRound(playerSelection, computerSelection) {
@@ -20,7 +21,7 @@ function playRound(playerSelection, computerSelection) {
      return "It's a tie!"
 
   }
-  else if (playerSelection==="rock"&& computerSelection==="paper"){
+  else if (playerSelection==="rock" && computerSelection==="paper"){
      return "you lose! Paper beats rock. "
 
   }
