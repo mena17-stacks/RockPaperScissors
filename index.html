@@ -1,11 +1,11 @@
 <script> 
- for (let i = 0; i < 5; i++) {
+ 
  
 function game() {}
 let playerScore = 0;
 let computerScore = 0;
 
-
+for (let i = 0; i < 5; i++) {
 const words = ["rock", "paper", "scissors"];
 
 let getComputerChoice = words[Math.floor(Math.random() * words.length)]
@@ -73,12 +73,9 @@ console.log(`Computer pick: ${computerSelection}`);
 console.log(`Computer: ${computerScore}`);
 console.log(`Player: ${playerScore}`);
  }
- function winGame() {
-    if (playerScore > computerScore) {
-        console.log("You win!")
-    } else if (computerScore < computerScore) {
-        console.log("You lose!")
-    }
-}
+
+
+  console.log('Game Over')
+
 
 </script> 
