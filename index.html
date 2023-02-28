@@ -1,4 +1,6 @@
 <script> 
+ for (let i = 0; i < 5; i++) {
+ 
 function game() {}
 let playerScore = 0;
 let computerScore = 0;
@@ -6,11 +8,7 @@ let computerScore = 0;
 
 
 const words = ["rock", "paper", "scissors"];
-const playGame = () => {
-   for (let i = 0; i < 5; i++) {
-      let choice = Math.floor(Math.random() * 3) + 1;
-   }
-}
+
    
 
 let getComputerChoice = words[Math.floor(Math.random() * words.length)]
@@ -18,6 +16,7 @@ let getComputerChoice = words[Math.floor(Math.random() * words.length)]
 
 let playerSelection = prompt ('choose rock, paper or scissors');
 function playRound(playerSelection, computerSelection) {
+
    if (playerSelection===computerSelection){
      console.log( "It's a tie!");
 
@@ -67,18 +66,17 @@ function playRound(playerSelection, computerSelection) {
 
 
 
+
 const computerSelection =getComputerChoice;
 console.log(playRound(playerSelection, computerSelection));
 
 
-playGame();
+
 console.log(`Player pick: ${playerSelection}`);
 console.log(`Computer pick: ${computerSelection}`);
 
 console.log(`Computer: ${computerScore}`);
 console.log(`Player: ${playerScore}`);
-
-
-
+ }
 
 </script> 
