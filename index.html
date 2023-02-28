@@ -6,10 +6,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 
-
 const words = ["rock", "paper", "scissors"];
-
-   
 
 let getComputerChoice = words[Math.floor(Math.random() * words.length)]
    console.log (getComputerChoice)
@@ -66,17 +63,22 @@ function playRound(playerSelection, computerSelection) {
 
 
 
-
 const computerSelection =getComputerChoice;
 console.log(playRound(playerSelection, computerSelection));
 
-
-
+game();
 console.log(`Player pick: ${playerSelection}`);
 console.log(`Computer pick: ${computerSelection}`);
 
 console.log(`Computer: ${computerScore}`);
 console.log(`Player: ${playerScore}`);
  }
+ function winGame() {
+    if (playerScore > computerScore) {
+        console.log("You win!")
+    } else if (computerScore < computerScore) {
+        console.log("You lose!")
+    }
+}
 
 </script> 
