@@ -7,8 +7,21 @@
    <title>Rock Paper Scissors </title>
 </head>
 <body>
+   <div class="buttons">
+   <button id='but1'>
+      Rock
+   </button>
+   <button id='but2'>
+      Paper
+   </button>
+   <button id='but3'>
+      Scissors
+   </button>
+   </div>
 
 <script> 
+
+
 
 function game() {}
 let playerScore = 0;
@@ -88,8 +101,11 @@ console.log('Game Over')
 if (playerScore > computerScore){
    console.log ('Congrats! You win!')
 }
-else {
+else if (playerScore < computerScore){
    console.log ('Computer wins!')
+}
+else{
+   console.log ('No one wins. It is a tie.')
 }
 
 
