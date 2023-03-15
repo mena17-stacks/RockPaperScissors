@@ -8,20 +8,18 @@
 </head>
 <body>
    <div class="buttons">
-   <button id='but1'>
+   <button id='rock' onclick='playRound()'>
       Rock
    </button>
-   <button id='but2'>
+   <button id='paper' onclick='playRound()'>
       Paper
    </button>
-   <button id='but3'>
+   <button id='scissors' onclick='playRound()'>
       Scissors
    </button>
    </div>
 
 <script> 
-
-
 
 function game() {}
 let playerScore = 0;
@@ -33,7 +31,7 @@ const words = ["rock", "paper", "scissors"];
 let getComputerChoice = words[Math.floor(Math.random() * words.length)]
    console.log (getComputerChoice)
 
-let playerSelection = prompt ('choose rock, paper or scissors');
+let playerSelection= ['rock','paper','scissors'];
 function playRound(playerSelection, computerSelection) {
 
    if (playerSelection===computerSelection){
