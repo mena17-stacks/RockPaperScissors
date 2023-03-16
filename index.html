@@ -4,109 +4,40 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
+   <script src="JavaScript.js"></script>
    <title>Rock Paper Scissors </title>
 </head>
 <body>
-   <div class="buttons">
-   <button id='rock' onclick='playRound()'>
+   <div class="top">
+      <div class="menubar">
+          <ul>
+              <li> about us </li>
+              <li> help </li>
+              <li> contact </li>
+          </ul>
+      </div>
+   <header> 
+      <h1>Rock Paper Scissors </h1>
+   </header>
+   <div class='buttons'>
+   <button id='paper' onclick='playerSelection()'>
+   Paper
+   </button>
+   <button id='scissors' onclick='playerSelection()'>
+   Scissors
+   </button>
+   <button id='rock' onclick='playerSelection()'>
       Rock
-   </button>
-   <button id='paper' onclick='playRound()'>
-      Paper
-   </button>
-   <button id='scissors' onclick='playRound()'>
-      Scissors
    </button>
    </div>
 
-<script> 
+   <img src='rockpaperscissors.jpg' alt='rock, paper, and scissors with a wood panel background'>
 
-function game() {}
-let playerScore = 0;
-let computerScore = 0;
-
-for (let i = 0; i < 5; i++) {
-const words = ["rock", "paper", "scissors"];
-
-let getComputerChoice = words[Math.floor(Math.random() * words.length)]
-   console.log (getComputerChoice)
-
-let playerSelection= ['rock','paper','scissors'];
-function playRound(playerSelection, computerSelection) {
-
-   if (playerSelection===computerSelection){
-     console.log( "It's a tie!");
-
-  }
-  else if (playerSelection==="rock" && computerSelection==="paper"){
-   computerScore++;
-   console.log("Paper beats rock.");
-  
-  }
-  else if (playerSelection=== "rock" && computerSelection=== "scissors"){
-   playerScore++;
-   console.log("Rock beats scissors");
- 
-  }
-  else if (playerSelection==="paper" && computerSelection=== "paper"){
-     console.log("It's a tie!");
-
-  }
-  else if (playerSelection==="paper" && computerSelection=== "rock"){
-   playerScore++;  
-   console.log("paper beats rock");
-  
-  }
-  else if (playerSelection==="paper" && computerSelection=== "scissors"){
-   computerScore++;
-   console.log( "scissors beats paper");
- 
-  }
-  else if (playerSelection==="scissors" && computerSelection=== "scissors"){
-   console.log("It's a tie!");
- 
-  }
-  else if (playerSelection==="scissors" && computerSelection=== "paper"){
-   playerScore++;
-   console.log("scissors beats paper");
-   
-  }
-  else if (playerSelection==="scissors" && computerSelection=== "rock"){
-   computerScore++;
-   console.log( "rock beats scissors");
-  
-  }
-  else {
-     console.log( "this is not an adequate response. Choose rock, paper or scissors. ");
-  }
-}
-
-
-
-const computerSelection =getComputerChoice;
-console.log(playRound(playerSelection, computerSelection));
-
-game();
-console.log(`Player pick: ${playerSelection}`);
-console.log(`Computer pick: ${computerSelection}`);
-
-console.log(`Computer: ${computerScore}`);
-console.log(`Player: ${playerScore}`);
-
- }
-
-console.log('Game Over')
-if (playerScore > computerScore){
-   console.log ('Congrats! You win!')
-}
-else if (playerScore < computerScore){
-   console.log ('Computer wins!')
-}
-else{
-   console.log ('No one wins. It is a tie.')
-}
-
-
-</script> 
 </body>
 </html>
+
+
+
+
+
