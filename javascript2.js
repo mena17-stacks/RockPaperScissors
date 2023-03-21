@@ -3,16 +3,17 @@ function game() {}
 let playerScore = 0;
 let computerScore = 0;
 
-const btns = document.querySelectorAll(".btn");
+const buttons = document.querySelectorAll(".btn");
 let rock = "rock";
 let paper = "paper";
 let scissors = "scissors";
+
 
 const words = ['rock', 'paper', 'scissors'];
 let getComputerChoice = words[Math.floor(Math.random() * words.length)]
    console.log (getComputerChoice)
 
-let playerSelection = prompt ('choose rock, paper or scissors');
+
 function playRound(playerSelection, computerSelection) {
 
    if (playerSelection===computerSelection){
@@ -60,9 +61,6 @@ function playRound(playerSelection, computerSelection) {
   else {
      console.log('this is not an adequate response. Choose rock, paper or scissors.');
   }
-}
-
-const computerSelection =getComputerChoice;
 console.log(playRound(playerSelection, computerSelection));
 
 game();
@@ -71,16 +69,19 @@ console.log(`Computer pick: ${computerSelection}`);
 
 console.log(`Computer: ${computerScore}`);
 console.log(`Player: ${playerScore}`);
+checkGame()
+}
 
-
-
-console.log('Game Over')
+function checkGame(){
 if (playerScore === '5'){
+    console.log('Game Over')
    console.log ('Congrats! You win!')
 }
 else if (computerScore === '5'){
+    console.log('Game Over')
    console.log ('Computer wins!')
 }
 else{
-   console.log ('No one wins. It is a tie.')
+      playRound()
+}
 }
