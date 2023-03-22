@@ -13,6 +13,7 @@ header {
     align-items: center;
     margin: 15px;
     padding: 30px;
+    border-radius: 30px;
 }
 .menubar{
     display:flex;
@@ -35,7 +36,6 @@ ul {
     font-size: 50px;
     padding-top: 50px;
     padding-bottom: 20px;
-
 }
 
 img{
@@ -45,4 +45,5 @@ img{
     margin-top: auto;
     align-items: center;
     justify-content: center;
+    border-radius: 100px;
 }
