@@ -3,12 +3,14 @@ function game() {}
 let playerScore = 0;
 let computerScore = 0;
 let roundCount =0;
+let gameIsOver = false;
 
 window.onload = function(){ 
 document.getElementById('rock').onclick = player;
 document.getElementById('paper').onclick = player;
 document.getElementById('scissors').onclick = player;
 };
+
 
 function player(){
    let playerChoice = this.id;
@@ -61,4 +63,18 @@ function playRound(playerSelection, computerSelection) {
 }
    console.log(`Computer: ${computerScore}`);
    console.log(`Player: ${playerScore}`);
+
+
+if (playerScore === 5) {
+   isGameOver = true;
+   console.log(`You win the Game!`);
+   console.log(`refresh the page to play again`);
+ } else if (computerScore === 5) {
+   isGameOver = true;
+   console.log(`Computer wins the Game!`);
+   console.log(`refresh the page to play again`);
+ } else {
+   isGameOver = false;
+ }
 }
+
